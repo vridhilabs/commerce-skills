@@ -1,30 +1,37 @@
 {
   "name": "@vridhilabs/commerce-skills",
-  "version": "1.0.0",
-  "private": false,
-  "type": "module",
+  "version": "1.0.1",
+  "description": "Master Commerce OS and Agentic Hyperlocal E-Commerce Skill Suite",
+  "main": "bin/cli.js",
   "bin": {
     "commerce-skills": "bin/cli.js"
   },
+  "type": "module",
+  "private": false,
   "scripts": {
-    "dev": "astro dev --port 3000 --host 127.0.0.1",
-    "start": "astro dev --port 3000 --host 127.0.0.1",
-    "build": "astro build",
-    "preview": "astro preview"
+    "test": "node bin/cli.js list"
   },
-  "dependencies": {
-    "@astrojs/react": "^4.2.1",
-    "@astrojs/tailwind": "^6.0.0",
-    "astro": "^5.4.2",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.344.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tailwind-merge": "^2.6.0",
-    "tailwindcss": "^3.4.17"
+  "keywords": [
+    "commerce-os",
+    "agent-skills",
+    "antigravity",
+    "claude-code",
+    "cursor",
+    "wms",
+    "oms",
+    "fms",
+    "tms",
+    "hyperlocal",
+    "quick-commerce"
+  ],
+  "author": "Vridhi Labs <hello@vridhilabs.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vridhilabs/commerce-skills.git"
   },
-  "devDependencies": {
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5"
-  }
+  "bugs": {
+    "url": "https://github.com/vridhilabs/commerce-skills/issues"
+  },
+  "homepage": "https://github.com/vridhilabs/commerce-skills#readme"
 }
