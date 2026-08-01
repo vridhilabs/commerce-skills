@@ -1,0 +1,24 @@
+{
+  "name": "commerce-skills",
+  "description": "Master Commerce OS and Agentic Hyperlocal E-Commerce Skill Suite",
+  "version": "1.0.0",
+  "author": "Vridhi Labs",
+  "homepage": "https://github.com/vridhilabs/commerce-skills",
+  "skills": [
+    "skills/core-commerce/SKILL.md",
+    "skills/logistics-fms-tms/SKILL.md",
+    "skills/supplier-brand-portal/SKILL.md",
+    "skills/customer-growth-crm/SKILL.md",
+    "skills/commerce-intelligence/SKILL.md",
+    "skills/financial-os/SKILL.md",
+    "skills/local-brand-accelerator/SKILL.md",
+    "skills/b2b-commerce/SKILL.md",
+    "skills/creator-commerce/SKILL.md",
+    "skills/hyperlocal-network/SKILL.md",
+    "skills/api-integrations/SKILL.md",
+    "skills/ai-commerce-os/SKILL.md",
+    "skills/commerce-platform-sdk/SKILL.md",
+    "skills/vertical-marketplaces/SKILL.md",
+    "skills/end-vision-ecosystem/SKILL.md"
+  ]
+}
