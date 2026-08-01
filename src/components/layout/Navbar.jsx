@@ -55,7 +55,7 @@ export default function Navbar({
               activeTab === 'skills' ? 'bg-violet-500/15 text-violet-300 border border-violet-500/30' : 'text-muted-foreground hover:text-white hover:bg-white/5'
             }`}
           >
-            <Layers className="w-3.5 h-3.5" /> Catalog
+            <Layers className="w-3.5 h-3.5" /> Curriculum
           </button>
           <button
             onClick={() => setActiveTab('architecture')}

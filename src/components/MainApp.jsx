@@ -2,14 +2,16 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './layout/Navbar';
 import SkillCard from './SkillCard';
 import SkillModal from './SkillModal';
+import MinimalCatalog from './MinimalCatalog';
 import ArchitectureView from './ArchitectureView';
 import VerticalExplorer from './VerticalExplorer';
 import PromptGenerator from './PromptGenerator';
 import { COMMERCE_SKILLS } from '../data/commerceSkillsData';
-import { Sparkles, Layers, Box, Compass, Terminal, Shield, Zap } from 'lucide-react';
+import { Sparkles, Layers, Box, Compass, Terminal, Shield, Zap, LayoutGrid, List } from 'lucide-react';
 
 export default function MainApp() {
   const [activeTab, setActiveTab] = useState('skills');
+  const [viewMode, setViewMode] = useState('minimal'); // 'minimal' | 'grid'
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSkill, setSelectedSkill] = useState(null);
@@ -96,14 +98,14 @@ export default function MainApp() {
             </div>
           </section>
 
-          {/* Category Pills Bar */}
-          <div className="max-w-7xl mx-auto px-4 mb-8">
-            <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          {/* View Mode & Category Pills Bar */}
+          <div className="max-w-7xl mx-auto px-4 mb-8 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
               {categories.map((cat, i) => (
                 <button
                   key={i}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
+                  className={`whitespace-nowrap px-3 py-1 rounded-full text-xs font-medium transition-all ${
                     selectedCategory === cat
                       ? 'bg-gradient-to-r from-violet-600/30 to-cyan-600/30 border border-violet-500/50 text-white shadow-lg shadow-violet-500/20'
                       : 'bg-card/40 border border-border/40 text-muted-foreground hover:text-white hover:border-border'
@@ -113,34 +115,65 @@ export default function MainApp() {
                 </button>
               ))}
             </div>
+
+            {/* View Mode Toggle: Minimal vs Grid */}
+            <div className="flex items-center gap-1 p-1 bg-slate-900 border border-slate-800 rounded-lg text-xs font-mono">
+              <button
+                onClick={() => setViewMode('minimal')}
+                className={`px-2.5 py-1 rounded flex items-center gap-1.5 transition-colors ${
+                  viewMode === 'minimal' ? 'bg-violet-600 text-white font-semibold' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <List className="w-3.5 h-3.5" /> Minimal Curriculum
+              </button>
+              <button
+                onClick={() => setViewMode('grid')}
+                className={`px-2.5 py-1 rounded flex items-center gap-1.5 transition-colors ${
+                  viewMode === 'grid' ? 'bg-violet-600 text-white font-semibold' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <LayoutGrid className="w-3.5 h-3.5" /> Cards Grid
+              </button>
+            </div>
           </div>
 
-          {/* Skills Grid */}
-          <div className="max-w-7xl mx-auto px-4">
-            {filteredSkills.length === 0 ? (
-              <div className="text-center py-16 text-muted-foreground">
-                <p className="text-base mb-2">No skills match "{searchQuery}"</p>
-                <button 
-                  onClick={() => { setSearchQuery(''); setSelectedCategory('All'); }}
-                  className="px-4 py-2 text-xs rounded-lg bg-card border border-border text-white hover:bg-muted transition-colors"
-                >
-                  Reset Filters
-                </button>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {filteredSkills.map(skill => (
-                  <SkillCard
-                    key={skill.id}
-                    skill={skill}
-                    onSelect={setSelectedSkill}
-                    onCopyCli={handleCopyCli}
-                    isCopied={copiedCli === skill.cliCommand}
-                  />
-                ))}
-              </div>
-            )}
-          </div>
+          {/* Render Minimal Catalog or Grid View */}
+          {viewMode === 'minimal' ? (
+            <div className="max-w-7xl mx-auto px-4">
+              <MinimalCatalog
+                searchQuery={searchQuery}
+                selectedCategory={selectedCategory}
+                onSelectSkill={setSelectedSkill}
+                onCopy={handleCopy}
+              />
+            </div>
+          ) : (
+            <div className="max-w-7xl mx-auto px-4">
+              {filteredSkills.length === 0 ? (
+                <div className="text-center py-16 text-muted-foreground">
+                  <p className="text-base mb-2">No skills match "{searchQuery}"</p>
+                  <button 
+                    onClick={() => { setSearchQuery(''); setSelectedCategory('All'); }}
+                    className="px-4 py-2 text-xs rounded-lg bg-card border border-border text-white hover:bg-muted transition-colors"
+                  >
+                    Reset Filters
+                  </button>
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {filteredSkills.map(skill => (
+                    <SkillCard
+                      key={skill.id}
+                      skill={skill}
+                      onSelect={setSelectedSkill}
+                      onCopyCli={handleCopyCli}
+                      isCopied={copiedCli === skill.cliCommand}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </main>
       )}
 
