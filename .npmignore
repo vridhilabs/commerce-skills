@@ -1,0 +1,12 @@
+# Ignore build & cache folders
+.astro/
+dist/
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore OS & editor files
+.DS_Store
+.vscode/
+.idea/
