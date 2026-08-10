@@ -1,6 +1,6 @@
 {
   "name": "@vridhilabs/commerce-skills",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Master Commerce OS and Agentic Hyperlocal E-Commerce Skill Suite",
   "main": "bin/cli.js",
   "bin": {
@@ -33,5 +33,15 @@
   "bugs": {
     "url": "https://github.com/vridhilabs/commerce-skills/issues"
   },
-  "homepage": "https://github.com/vridhilabs/commerce-skills#readme"
+  "homepage": "https://github.com/vridhilabs/commerce-skills#readme",
+  "files": [
+    "skills/",
+    "SKILL.md",
+    "bin/",
+    "README.md",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    ".claude-plugin/"
+  ]
 }

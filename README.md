@@ -1,44 +1,56 @@
 # 🛒 Commerce Skills
 
-> Open-Source AI Agent Skill Library for **Commerce OS**, Quick-Commerce, Hyperlocal Logistics, B2B Procurement, and Multi-Tenant E-Commerce.
+> Open-Source AI Agent Skill Library for **Commerce OS** · Quick-Commerce · Hyperlocal Logistics · B2B Procurement · Multi-Tenant E-Commerce.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
-[![Skills Suite](https://img.shields.io/badge/Skills-40%2B%20Modules-06B6D4.svg)](#skills-catalog)
-[![Target Agents](https://img.shields.io/badge/Agents-Antigravity%20%7C%20Claude%20%7C%20Cursor-8B5CF6.svg)](#installation)
+[![npm](https://img.shields.io/npm/v/@vridhilabs/commerce-skills?color=06B6D4)](https://www.npmjs.com/package/@vridhilabs/commerce-skills)
+[![Skills](https://img.shields.io/badge/Skills-15%20Domains%20%E2%80%A2%2040%2B%20Modules-06B6D4.svg)](#skills-catalog)
+[![Agents](https://img.shields.io/badge/Agents-Claude%20%7C%20Cursor%20%7C%20Codex%20%7C%20OpenCode%20%7C%2072%20more-8B5CF6.svg)](#installation)
+[![GitHub stars](https://img.shields.io/github/stars/vridhilabs/commerce-skills?style=social)](https://github.com/vridhilabs/commerce-skills)
 
-**Commerce Skills** turns complex e-commerce, warehouse management (WMS), fleet logistics (FMS/TMS), financial engineering, and autonomous AI automation requirements into reusable, production-grade skills and prompts for AI coding agents (Antigravity, Claude Code, Cursor, Windsurf).
+**Commerce Skills** turns complex e-commerce, warehouse management (WMS), fleet logistics (FMS/TMS), financial engineering, and autonomous AI automation requirements into **reusable, production-grade skills and prompts** for AI coding agents.
+
+Instead of asking an agent to "build a commerce platform" and hoping for the best, load a skill that encodes the domain: schemas, workflows, edge cases, and executable prompts — so your agent builds **correct** systems the first time.
 
 ---
 
-## 🌐 Interactive Web UI Portal
+## 🌐 Interactive Web Portal
 
-Explore skills, inspect ready-to-use prompts, view the 5–10 year ecosystem architecture, browse 18 vertical marketplaces, and use the interactive AI Prompt Generator on the web:
+Explore skills, inspect ready-to-use prompts, browse 18 vertical marketplaces, and use the AI Prompt Generator:
 
-👉 **[Launch Commerce Skills Web Portal](http://127.0.0.1:3000/)** *(Run `npm run dev` to start locally)*
+👉 **[skills.vridhilabs.com](https://skills.vridhilabs.com)** — live web portal
 
 ---
 
 ## ⚡ Quick Installation
 
-Add the entire Commerce OS skill suite to your AI agent environment:
-
 ```bash
-# Add master commerce skills package
+# Add the full Commerce OS skill suite to your agent
 npx skills add vridhilabs/commerce-skills
 
-# Or using Antigravity CLI
-agy add commerce-skills
-```
-
-### Install Specific Sub-Skills
-
-```bash
+# Or install individual domain skills
 npx skills add vridhilabs/commerce-skills/core-commerce
 npx skills add vridhilabs/commerce-skills/logistics-fms-tms
 npx skills add vridhilabs/commerce-skills/financial-os
 npx skills add vridhilabs/commerce-skills/ai-commerce-os
 npx skills add vridhilabs/commerce-skills/b2b-commerce
 ```
+
+**Works with:** Claude Code, Cursor, Codex, OpenCode, Windsurf, Antigravity + 72 more agents (via the [skills CLI](https://skills.sh/)).
+
+---
+
+## 💡 What You Get
+
+Each skill is a complete domain package your agent can act on:
+
+| Included | Example |
+| :--- | :--- |
+| **System specification** | OMS state machine (12 states), WMS bin/FEFO rules, TMS VRPTW model |
+| **Architecture patterns** | CQRS, Outbox, event-driven orchestration, multi-tenant schemas |
+| **API contracts** | REST/GraphQL routes, webhook events, request/response DTOs |
+| **Executable prompts** | "Build the warehouse module" → agent generates production code |
+| **Edge cases** | FEFO holds, payment splits, GST e-invoicing, dispatch exceptions |
 
 ---
 
@@ -113,24 +125,50 @@ npx skills add vridhilabs/commerce-skills/b2b-commerce
 
 ---
 
-## 🚀 Deploy Web UI to Vercel / Netlify
-
-This repository contains a Vite + React web application ready for 1-click deployment to Vercel, Netlify, or Cloudflare Pages:
+## 🚀 How to Use a Skill
 
 ```bash
-# Local development
-npm install
-npm run dev
+# 1. Install a skill into your agent workspace
+npx skills add vridhilabs/commerce-skills/core-commerce
 
-# Build for production
-npm run build
+# 2. Open the SKILL.md — it contains the full spec + an executable prompt
+cat skills/core-commerce/SKILL.md
+
+# 3. Paste the prompt template into your agent, e.g.:
+#    "Build the warehouse module per the spec: bins, FEFO picks, putaway, cycle counts."
 ```
+
+---
+
+## 🧩 Who It's For
+
+- **Founders & product teams** building quick-commerce, dark stores, or marketplace platforms
+- **Developers** using AI agents for commerce systems (Claude Code, Cursor, Codex, OpenCode)
+- **Agencies** delivering commerce/ERP implementations with AI-assisted development
+- **Students & researchers** studying commerce system architecture (WMS/OMS/FMS/TMS)
 
 ---
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) and [AGENTS.md](AGENTS.md) before submitting pull requests.
+
+- Add a new skill module or vertical → see `CONTRIBUTING.md`
+- Report issues / request skills → [GitHub Issues](https://github.com/vridhilabs/commerce-skills/issues)
+
+---
+
+## 📦 npm Package
+
+Published as [`@vridhilabs/commerce-skills`](https://www.npmjs.com/package/@vridhilabs/commerce-skills) with a CLI:
+
+```bash
+npm i -g @vridhilabs/commerce-skills
+commerce-skills list      # list all skills
+commerce-skills add core-commerce   # install a skill to ./skills
+```
+
+---
 
 ## 📄 License
 
