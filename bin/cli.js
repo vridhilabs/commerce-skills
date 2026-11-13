@@ -18,6 +18,7 @@ console.log('\x1b[90m%s\x1b[0m', '----------------------------------------------
 const skillsList = [
   'core-commerce',
   'logistics-fms-tms',
+  'ev-fleet-ops',
   'supplier-brand-portal',
   'customer-growth-crm',
   'commerce-intelligence',
@@ -34,7 +35,7 @@ const skillsList = [
 ];
 
 if (command === 'list') {
-  console.log('\x1b[33m%s\x1b[0m', 'Available Skill Modules (15):');
+  console.log('\x1b[33m%s\x1b[0m', 'Available Skill Modules (16):');
   skillsList.forEach((s, i) => {
     console.log(`  ${i + 1}. \x1b[32m${s}\x1b[0m`);
   });
