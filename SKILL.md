@@ -3,7 +3,7 @@ name: commerce-skills
 description: |
   Master Commerce OS and Agentic Hyperlocal E-Commerce Skill Suite.
   Provides comprehensive specifications, architecture patterns, API contracts, AI prompts, and implementation playbooks for building, automating, and scaling end-to-end commerce platforms.
-  Covers MVP Core Commerce (Marketplace, IMS, WMS, OMS), Logistics (FMS, TMS, Driver Apps), Supplier & Brand Portals, CRM & Marketing, Commerce Intelligence & AI, Financial OS, Brand Accelerator, B2B Commerce, Creator Commerce, Hyperlocal Networks, Integrations, AI Role Managers, Platform SDKs, and 18 Vertical Marketplaces.
+  Covers MVP Core Commerce (Marketplace, IMS, WMS, OMS), Logistics (FMS, TMS, Driver Apps), EV Fleet Rental Ops, Supplier & Brand Portals, CRM & Marketing, Commerce Intelligence & AI, Financial OS, Brand Accelerator, B2B Commerce, Creator Commerce, Hyperlocal Networks, Integrations, AI Role Managers, Platform SDKs, and 18 Vertical Marketplaces.
 ---
 
 # Commerce OS Skill Suite
@@ -12,12 +12,13 @@ Welcome to **Commerce OS**, the open-source infrastructure and skill system for 
 
 ## Modular Skill Structure
 
-This skill suite is organized into 15 specialized domain skill modules located in `skills/`:
+This skill suite is organized into 16 specialized domain skill modules located in `skills/`:
 
 | Module | Title | Primary Domains Covered |
 | :--- | :--- | :--- |
 | `01-core-commerce` | Core Commerce MVP | Marketplace App, Inventory Management (IMS), Warehouse (WMS), Order Management (OMS) |
 | `02-logistics-fms-tms` | Logistics & Fleet | Fleet Management (FMS), Transport Management (TMS), Driver App & Navigation |
+| `ev-fleet-ops` | EV Fleet Rental Ops | Rental state machine, KYC, hub inspections, deposit settlement, telematics, swap stations |
 | `03-supplier-brand-portal` | Supplier Platform | Vendor Onboarding, Product Upload, Brand Analytics, Marketing Dashboard |
 | `04-customer-growth-crm` | Customer Growth | CRM, Segments, Loyalty, Subscriptions, Push/WhatsApp Marketing |
 | `05-commerce-intelligence` | Commerce Intelligence | BI Analytics, AI Demand Forecasting, Price Optimization, AI Support |

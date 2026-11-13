@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/v/@vridhilabs/commerce-skills?color=06B6D4)](https://www.npmjs.com/package/@vridhilabs/commerce-skills)
-[![Skills](https://img.shields.io/badge/Skills-15%20Domains%20%E2%80%A2%2040%2B%20Modules-06B6D4.svg)](#skills-catalog)
+[![Skills](https://img.shields.io/badge/Skills-16%20Domains%20%E2%80%A2%2040%2B%20Modules-06B6D4.svg)](#skills-catalog)
 [![Agents](https://img.shields.io/badge/Agents-Claude%20%7C%20Cursor%20%7C%20Codex%20%7C%20OpenCode%20%7C%2072%20more-8B5CF6.svg)](#installation)
 [![GitHub stars](https://img.shields.io/github/stars/vridhilabs/commerce-skills?style=social)](https://github.com/vridhilabs/commerce-skills)
 
@@ -31,6 +31,7 @@ npx skills add vridhilabs/commerce-skills
 # Or install individual domain skills
 npx skills add vridhilabs/commerce-skills/core-commerce
 npx skills add vridhilabs/commerce-skills/logistics-fms-tms
+npx skills add vridhilabs/commerce-skills/ev-fleet-ops
 npx skills add vridhilabs/commerce-skills/financial-os
 npx skills add vridhilabs/commerce-skills/ai-commerce-os
 npx skills add vridhilabs/commerce-skills/b2b-commerce
@@ -54,12 +55,13 @@ Each skill is a complete domain package your agent can act on:
 
 ---
 
-## 🗺️ Skills Catalog (15 Domains)
+## 🗺️ Skills Catalog (16 Domains)
 
 | Skill Module | Domain | Key Capabilities |
 | :--- | :--- | :--- |
 | [**`core-commerce`**](skills/core-commerce/SKILL.md) | Core Commerce MVP | Marketplace App, Inventory (IMS), FEFO Warehouse (WMS), Order Engine (OMS) |
 | [**`logistics-fms-tms`**](skills/logistics-fms-tms/SKILL.md) | Fleet & Transport | VRPTW route optimization, EV telemetry (FMS), auto-dispatch (TMS), Driver App |
+| [**`ev-fleet-ops`**](skills/ev-fleet-ops/SKILL.md) | EV Fleet Rental Ops | Rental state machine, rider KYC, hub handover/return inspections, approval-gated deposit settlement, safe immobilize, swap stations |
 | [**`supplier-brand-portal`**](skills/supplier-brand-portal/SKILL.md) | Supplier Platform | Self-serve vendor KYB, bulk catalog upload, inventory sync, brand analytics |
 | [**`customer-growth-crm`**](skills/customer-growth-crm/SKILL.md) | CRM & Growth | Customer 360, RFM auto-segmentation, WhatsApp campaigns, subscriptions |
 | [**`commerce-intelligence`**](skills/commerce-intelligence/SKILL.md) | Intelligence & AI | GMV/CM1/CM2 analytics, AI demand forecasting, FEFO markdown curves |
